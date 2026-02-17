@@ -1,0 +1,21 @@
+fastapi==0.110.0
+uvicorn==0.27.1
+SQLAlchemy==1.4.52
+pymysql==1.1.0
+passlib[bcrypt]==1.7.4
+python-jose==3.3.0
+bcrypt==4.1.2
+pydantic==1.10.14
+email-validator==2.1.0.post1
+python-multipart==0.0.9
+
+## Scalability Note
+
+This project follows a modular architecture with separate layers for models, routes, schemas, and utilities. 
+To scale:
+
+- Move to Dockerized deployment
+- Add Redis caching for task queries
+- Implement load balancing with Nginx
+- Separate auth and task services into microservices
+- Use async DB drivers for high concurrency
